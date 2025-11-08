@@ -804,6 +804,15 @@
                     <div class="flex items-center gap-3">
                       <span
                         class="material-symbols-outlined text-primary-blue text-2xl"
+                        >phone</span
+                      >
+                      <a class="hover:underline" href="tel:+573232277175"
+                        >+57 323 2277175</a
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary-blue text-2xl"
                         >mail</span
                       >
                       <a
@@ -812,26 +821,17 @@
                         >contacto@seguridadalimentariapro.com</a
                       >
                     </div>
-                    <div class="flex items-center gap-3">
-                      <span
-                        class="material-symbols-outlined text-primary-blue text-2xl"
-                        >call</span
-                      >
-                      <a class="hover:underline" href="tel:+1234567890"
-                        >+1 (234) 567-890</a
-                      >
-                    </div>
                   </div>
                 </div>
                 <div class="flex-1 w-full">
-                  <form class="space-y-4">
+                  <form id="contact-form" class="space-y-4">
                     <div>
                       <label class="sr-only" for="name">Nombre</label>
                       <input
                         class="w-full rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 focus:border-primary-blue focus:ring-primary-blue"
                         id="name"
                         name="name"
-                        placeholder="Su Nombre"
+                        placeholder="Su Nombre (Opcional)"
                         type="text"
                       />
                     </div>
@@ -841,37 +841,175 @@
                         class="w-full rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 focus:border-primary-blue focus:ring-primary-blue"
                         id="company"
                         name="company"
-                        placeholder="Nombre de la Empresa"
+                        placeholder="Nombre de la Empresa (Opcional)"
                         type="text"
                       />
                     </div>
                     <div>
-                      <label class="sr-only" for="email"
-                        >Correo electrónico</label
+                      <details
+                        class="rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 group"
                       >
-                      <input
-                        class="w-full rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 focus:border-primary-blue focus:ring-primary-blue"
-                        id="email"
-                        name="email"
-                        placeholder="Su Dirección de Correo Electrónico"
-                        type="email"
-                      />
-                    </div>
-                    <div>
-                      <label class="sr-only" for="message">Mensaje</label>
-                      <textarea
-                        class="w-full rounded-md border-gray-300 dark:border-gray-600 bg-background-light dark:bg-gray-800 focus:border-primary-blue focus:ring-primary-blue"
-                        id="message"
-                        name="message"
-                        placeholder="Su Mensaje"
-                        rows="4"
-                      ></textarea>
+                        <summary
+                          class="flex cursor-pointer items-center justify-between gap-4 p-3 font-medium text-text-dark dark:text-text-light"
+                        >
+                          <span class="text-sm">Servicios de Interés *</span>
+                          <span
+                            class="material-symbols-outlined group-open:rotate-180 transition-transform"
+                            >expand_more</span
+                          >
+                        </summary>
+                        <div
+                          class="space-y-2 max-h-60 overflow-y-auto border-t border-gray-300 dark:border-gray-600 p-3"
+                        >
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Asesorías Especializadas"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Asesorías Especializadas</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Estudios de Factibilidad"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Estudios de Factibilidad</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Diagnóstico Integral"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Diagnóstico Integral</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Diseño de Sistemas"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Diseño de Sistemas</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Auditorías y Seguimiento"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Auditorías y Seguimiento</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Administración y Dirección"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Administración y Dirección</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Análisis de Calidad"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Análisis de Calidad</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Optimización de Producción"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Optimización de Producción</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Gestión de Trámites INVIMA"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Gestión de Trámites INVIMA</span
+                            >
+                          </label>
+                          <label
+                            class="flex items-start gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded"
+                          >
+                            <input
+                              type="checkbox"
+                              name="services"
+                              value="Gestión de Análisis Laboratorio"
+                              class="mt-1 rounded border-gray-300 text-primary-blue focus:ring-primary-blue"
+                            />
+                            <span
+                              class="text-sm text-text-dark dark:text-text-light"
+                              >Gestión de Análisis Laboratorio</span
+                            >
+                          </label>
+                        </div>
+                      </details>
                     </div>
                     <button
-                      class="w-full flex items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                      class="w-full flex items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
                       type="submit"
                     >
-                      Enviar
+                      <span class="material-symbols-outlined">chat</span>
+                      <span>Contactar por WhatsApp</span>
                     </button>
                   </form>
                 </div>
@@ -884,23 +1022,25 @@
             class="max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-40 py-8 flex flex-col sm:flex-row justify-between items-center gap-4"
           >
             <div class="text-sm text-gray-600 dark:text-gray-400">
-              © 2024 Profesional en Seguridad Alimentaria. Todos los derechos
-              reservados.
+              © <span id="current-year"></span> S.D. Sergio Duque Fernández
+              Todos los derechos reservados.
             </div>
             <div class="flex items-center gap-3">
-              <div class="size-6 text-primary">
-                <svg
-                  fill="none"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
+              <div class="flex gap-4">
+                <a class="text-gray-500 hover:text-primary-blue" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 7.68 7.68"
+                    preserveAspectRatio="xMidYMid"
+                  >
+                    <path
+                      d="M3.84.692c1.026 0 1.147.004 1.552.022.374.017.578.08.713.132.179.07.307.153.442.287s.217.263.287.442c.052.136.115.339.132.713.018.405.022.526.022 1.552s-.004 1.147-.022 1.552c-.017.374-.08.578-.132.713-.07.179-.153.307-.287.442s-.263.217-.442.287a2.2 2.2 0 0 1-.713.132c-.405.018-.526.022-1.552.022s-1.147-.004-1.552-.022c-.374-.017-.578-.08-.713-.132a1.2 1.2 0 0 1-.442-.287 1.2 1.2 0 0 1-.287-.442 2.2 2.2 0 0 1-.132-.713C.696 4.987.692 4.866.692 3.84s.004-1.147.022-1.552c.017-.374.08-.578.132-.713a1.2 1.2 0 0 1 .287-.442c.135-.135.263-.217.442-.287.136-.052.339-.115.713-.132.405-.018.526-.022 1.552-.022m0-.692C2.797 0 2.667.004 2.257.023s-.688.083-.932.179C1.072.3.858.432.645.645s-.345.427-.444.68c-.095.244-.16.523-.178.932S0 2.797 0 3.84s.004 1.173.023 1.583c.018.409.084.688.178.932.098.253.23.467.443.68s.427.345.68.443c.244.095.523.16.932.178s.54.023 1.583.023 1.173-.004 1.583-.023c.408-.018.688-.084.932-.178.253-.098.467-.23.68-.443s.345-.427.443-.68c.095-.244.16-.523.178-.932s.023-.54.023-1.583-.004-1.173-.023-1.583a2.8 2.8 0 0 0-.178-.932c-.098-.253-.23-.467-.443-.68S6.608.3 6.355.201a2.8 2.8 0 0 0-.932-.178C5.013.004 4.883 0 3.84 0m0 1.868a1.972 1.972 0 1 0 0 3.945 1.972 1.972 0 0 0 0-3.945m0 3.252a1.28 1.28 0 1 1 0-2.56 1.28 1.28 0 0 1 0 2.56m2.51-3.33a.461.461 0 1 1-.922 0 .461.461 0 0 1 .922 0"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
               </div>
               <div class="flex gap-4">
                 <a class="text-gray-500 hover:text-primary-blue" href="#">
@@ -923,5 +1063,6 @@
         </footer>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
