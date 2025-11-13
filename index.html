@@ -112,13 +112,13 @@
     >
       <div class="layout-container flex h-full grow flex-col">
         <header
-          class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-10 md:px-20 lg:px-40"
+          class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-10 md:px-20"
         >
           <div
             class="flex items-center justify-between whitespace-nowrap py-4 max-w-7xl mx-auto"
           >
             <div class="flex items-center gap-3">
-              <div class="size-8 text-primary">
+              <div class="size-12 sm:size-8 text-primary">
                 <objective class="w-8 h-8">
                   <img
                     src="logo.svg"
@@ -129,31 +129,48 @@
               <h2
                 class="text-text-dark dark:text-text-light text-xl font-bold font-oswald tracking-wide"
               >
-                S.D. Sergio Duque Fernández
+                S.D. <span class="hidden min-[425px]:inline">
+
+                  Sergio Duque Fernández
+                </span>
               </h2>
             </div>
-            <div class="hidden lg:flex flex-1 justify-end gap-8">
-              <div class="flex items-center gap-9">
-                <a
-                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
-                  href="#about"
-                  >Acerca de</a
-                >
-                <a
-                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
-                  href="#services"
-                  >Servicios</a
-                >
-                <a
-                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
-                  href="#testimonials"
-                  >Testimonios</a
-                >
-                <a
-                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
-                  href="#contact"
-                  >Contacto</a
-                >
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="flex items-center gap-6">
+                <nav class="hidden lg:flex items-center xl:gap-9 gap-2">
+                  <ul>
+                    <a
+                      class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
+                      href="#about"
+                      >Acerca de</a
+                    >
+
+                  </ul>
+                  <ul>
+                    <a
+                      class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
+                      href="#services"
+                      >Servicios</a
+                    >
+
+                  </ul>
+                  <ul>
+                    <a
+                      class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
+                      href="#testimonials"
+                      >Testimonios</a
+                    >
+
+                  </ul>
+                  <ul>
+                    <a
+                      class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
+                      href="#contact"
+                      >Contacto</a
+                    >
+
+                  </ul>
+                </nav>
                 <div class="flex items-center gap-4 border-l border-gray-300 pl-4">
                   <a
                     class="flex items-center gap-2 text-text-dark dark:text-text-light hover:text-primary-blue transition-colors"
