@@ -80,6 +80,8 @@
       /* Smooth scrolling behavior for the entire page */
       html {
         scroll-behavior: smooth;
+        /* Increase base font size slightly */
+        font-size: 18px;
       }
 
       .font-oswald {
@@ -92,6 +94,13 @@
       /* Optional: Add scroll padding to account for fixed header */
       html {
         scroll-padding-top: 80px; /* Adjust based on header height */
+      }
+      
+      /* Responsive font scaling */
+      @media (max-width: 768px) {
+        html {
+          font-size: 16px;
+        }
       }
     </style>
   </head>
@@ -123,70 +132,102 @@
                 S.D. Sergio Duque Fernández
               </h2>
             </div>
-            <div class="hidden md:flex flex-1 justify-end gap-8">
+            <div class="hidden lg:flex flex-1 justify-end gap-8">
               <div class="flex items-center gap-9">
                 <a
-                  class="text-text-dark dark:text-text-light text-sm font-medium leading-normal hover:text-primary-blue"
+                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
                   href="#about"
                   >Acerca de</a
                 >
                 <a
-                  class="text-text-dark dark:text-text-light text-sm font-medium leading-normal hover:text-primary-blue"
+                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
                   href="#services"
                   >Servicios</a
                 >
                 <a
-                  class="text-text-dark dark:text-text-light text-sm font-medium leading-normal hover:text-primary-blue"
+                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
                   href="#testimonials"
                   >Testimonios</a
                 >
                 <a
-                  class="text-text-dark dark:text-text-light text-sm font-medium leading-normal hover:text-primary-blue"
+                  class="text-text-dark dark:text-text-light text-base font-medium leading-normal hover:text-primary-blue"
                   href="#contact"
                   >Contacto</a
                 >
+                <div class="flex items-center gap-4 border-l border-gray-300 pl-4">
+                  <a
+                    class="flex items-center gap-2 text-text-dark dark:text-text-light hover:text-primary-blue transition-colors"
+                    href="https://www.instagram.com/s.dsergioduquefernandez/"
+                    aria-label="Instagram de S.D. Sergio Duque Fernández"
+                    target="_blank"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 7.68 7.68"
+                      preserveAspectRatio="xMidYMid"
+                    >
+                      <path
+                        d="M3.84.692c1.026 0 1.147.004 1.552.022.374.017.578.08.713.132.179.07.307.153.442.287s.217.263.287.442c.052.136.115.339.132.713.018.405.022.526.022 1.552s-.004 1.147-.022 1.552c-.017.374-.08.578-.132.713-.07.179-.153.307-.287.442s-.263.217-.442.287a2.2 2.2 0 0 1-.713.132c-.405.018-.526.022-1.552.022s-1.147-.004-1.552-.022c-.374-.017-.578-.08-.713-.132a1.2 1.2 0 0 1-.442-.287 1.2 1.2 0 0 1-.287-.442 2.2 2.2 0 0 1-.132-.713C.696 4.987.692 4.866.692 3.84s.004-1.147.022-1.552c.017-.374.08-.578.132-.713a1.2 1.2 0 0 1 .287-.442c.135-.135.263-.217.442-.287.136-.052.339-.115.713-.132.405-.018.526-.022 1.552-.022m0-.692C2.797 0 2.667.004 2.257.023s-.688.083-.932.179C1.072.3.858.432.645.645s-.345.427-.444.68c-.095.244-.16.523-.178.932S0 2.797 0 3.84s.004 1.173.023 1.583c.018.409.084.688.178.932.098.253.23.467.443.68s.427.345.68.443c.244.095.523.16.932.178s.54.023 1.583.023 1.173-.004 1.583-.023c.408-.018.688-.084.932-.178.253-.098.467-.23.68-.443s.345-.427.443-.68c.095-.244.16-.523.178-.932s.023-.54.023-1.583-.004-1.173-.023-1.583a2.8 2.8 0 0 0-.178-.932c-.098-.253-.23-.467-.443-.68S6.608.3 6.355.201a2.8 2.8 0 0 0-.932-.178C5.013.004 4.883 0 3.84 0m0 1.868a1.972 1.972 0 1 0 0 3.945 1.972 1.972 0 0 0 0-3.945m0 3.252a1.28 1.28 0 1 1 0-2.56 1.28 1.28 0 0 1 0 2.56m2.51-3.33a.461.461 0 1 1-.922 0 .461.461 0 0 1 .922 0"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="hidden xl:inline text-sm">Instagram</span>
+                  </a>
+                  <a
+                    class="flex items-center gap-2 text-text-dark dark:text-text-light hover:text-primary-blue transition-colors"
+                    href="https://www.facebook.com/profile.php?id=61581196018123"
+                    aria-label="Facebook de S.D. Sergio Duque Fernández"
+                    target="_blank"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 0.72 0.72" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M.6.03a.09.09 0 0 1 .09.09V.6A.09.09 0 0 1 .6.69H.12A.09.09 0 0 1 .03.6V.12A.09.09 0 0 1 .12.03zm0 .06a.03.03 0 0 1 .03.03V.6A.03.03 0 0 1 .6.63H.45V.42h.062A.03.03 0 0 0 .54.399l.013-.04a.022.022 0 0 0-.021-.03H.45V.27C.45.255.465.24.48.24h.06A.03.03 0 0 0 .57.21V.189A.02.02 0 0 0 .554.168C.515.158.48.158.48.158.405.158.36.21.36.255V.33H.3a.03.03 0 0 0-.03.03v.03A.03.03 0 0 0 .3.42h.06v.21H.12A.03.03 0 0 1 .09.6V.12A.03.03 0 0 1 .12.09z" fill="currentColor"/></svg>
+                    <span class="hidden xl:inline text-sm">Facebook</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </header>
         <main class="flex flex-col items-center">
-          <div class="w-full max-w-7xl px-4 sm:px-10 md:px-20 lg:px-40">
-            <section class="w-full py-10 md:py-20">
-              <div class="relative min-h-[520px] rounded-xl overflow-hidden">
-                <img
-                  src="banner.jpg"
-                  alt="Una planta de procesamiento de alimentos limpia con productos frescos en primer plano"
-                  class="absolute inset-0 w-full h-full object-cover"
-                />
-                <div
-                  class="absolute inset-0 bg-black/50"
-                  aria-hidden="true"
-                ></div>
-                <div
-                  class="relative flex flex-col gap-6 items-start justify-center text-left p-6 md:p-12 h-full"
-                >
-                  <div class="flex flex-col gap-4 text-left max-w-2xl">
-                    <h1
-                      class="text-white text-5xl md:text-6xl font-bold leading-tight tracking-wide font-oswald"
-                    >
-                      Garantizando la Calidad e Inocuidad Alimentaria de su empresa
-                    </h1>
-                    <h2
-                      class="text-white text-base md:text-lg font-normal leading-normal"
-                    >
-                      Asesoramiento experto en seguridad y procesamiento de
-                      alimentos para proteger su marca y a sus consumidores.
-                    </h2>
-                  </div>
-                  <a
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
-                    href="#contact"
+          <!-- Full-width banner section -->
+          <section class="w-full">
+            <div class="relative h-[600px] max-h-[80vh] overflow-hidden">
+              <img
+                src="banner.jpg"
+                alt="Una planta de procesamiento de alimentos limpia con productos frescos en primer plano"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black/50"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="relative flex flex-col gap-6 items-start justify-center text-left p-6 md:p-12 lg:p-20 h-full max-w-7xl mx-auto"
+              >
+                <div class="flex flex-col gap-6 text-left max-w-3xl">
+                  <h1
+                    class="text-white text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-wide font-oswald"
                   >
-                    <span class="truncate">Contáctenos</span>
-                  </a>
+                    Garantizando la Calidad e Inocuidad Alimentaria de su empresa
+                  </h1>
+                  <h2
+                    class="text-white text-lg md:text-xl lg:text-2xl font-normal leading-normal"
+                  >
+                    Asesoramiento experto en calidad y procesamiento de
+                    alimentos para proteger su marca y a sus consumidores.
+                  </h2>
                 </div>
+                <a
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-primary text-white text-lg font-bold leading-normal tracking-[0.015em] hover:bg-secondary-green transition-all"
+                  href="#contact"
+                >
+                  <span class="truncate">Contáctenos</span>
+                </a>
               </div>
-            </section>
+            </div>
+          </section>
+          <div class="w-full max-w-7xl px-4 sm:px-10 md:px-20 lg:px-40">
             <section class="w-full py-10 md:py-20" id="about">
               <div class="flex flex-col lg:flex-row gap-10 md:gap-16">
                 <div class="h-full bg-gradient-to-b from-primary/10 to-primary/30 dark:from-primary/20 dark:to-primary/40 rounded-xl">
@@ -853,8 +894,8 @@
                       >
                       <a
                         class="hover:underline"
-                        href="mailto:scduque1@gmail.com"
-                        >scduque1@gmail.com</a
+                        href="mailto:sergioduquefernandez@gmail.com"
+                        >sergioduquefernandez@gmail.com</a
                       >
                     </div>
                   </div>
@@ -1058,42 +1099,40 @@
           <div
             class="max-w-7xl mx-auto px-4 sm:px-10 md:px-20 lg:px-40 py-8 flex flex-col sm:flex-row justify-between items-center gap-4"
           >
-            <div class="text-sm text-gray-600 dark:text-gray-400">
+            <div class="text-base text-gray-600 dark:text-gray-400">
               © <span id="current-year"></span> S.D. Sergio Duque Fernández
               Todos los derechos reservados.
             </div>
-            <div class="flex items-center gap-3">
-              <div class="flex gap-4">
-                <a
-                  class="text-gray-500 hover:text-primary-blue"
-                  href="https://www.instagram.com/s.dsergioduquefernandez/"
-                  aria-label="Instagram de S.D. Sergio Duque Fernández"
-                  target="_blank"
+            <div class="flex items-center gap-4">
+              <a
+                class="flex items-center gap-2 text-gray-500 hover:text-primary-blue transition-colors"
+                href="https://www.instagram.com/s.dsergioduquefernandez/"
+                aria-label="Instagram de S.D. Sergio Duque Fernández"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 7.68 7.68"
+                  preserveAspectRatio="xMidYMid"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 7.68 7.68"
-                    preserveAspectRatio="xMidYMid"
-                  >
-                    <path
-                      d="M3.84.692c1.026 0 1.147.004 1.552.022.374.017.578.08.713.132.179.07.307.153.442.287s.217.263.287.442c.052.136.115.339.132.713.018.405.022.526.022 1.552s-.004 1.147-.022 1.552c-.017.374-.08.578-.132.713-.07.179-.153.307-.287.442s-.263.217-.442.287a2.2 2.2 0 0 1-.713.132c-.405.018-.526.022-1.552.022s-1.147-.004-1.552-.022c-.374-.017-.578-.08-.713-.132a1.2 1.2 0 0 1-.442-.287 1.2 1.2 0 0 1-.287-.442 2.2 2.2 0 0 1-.132-.713C.696 4.987.692 4.866.692 3.84s.004-1.147.022-1.552c.017-.374.08-.578.132-.713a1.2 1.2 0 0 1 .287-.442c.135-.135.263-.217.442-.287.136-.052.339-.115.713-.132.405-.018.526-.022 1.552-.022m0-.692C2.797 0 2.667.004 2.257.023s-.688.083-.932.179C1.072.3.858.432.645.645s-.345.427-.444.68c-.095.244-.16.523-.178.932S0 2.797 0 3.84s.004 1.173.023 1.583c.018.409.084.688.178.932.098.253.23.467.443.68s.427.345.68.443c.244.095.523.16.932.178s.54.023 1.583.023 1.173-.004 1.583-.023c.408-.018.688-.084.932-.178.253-.098.467-.23.68-.443s.345-.427.443-.68c.095-.244.16-.523.178-.932s.023-.54.023-1.583-.004-1.173-.023-1.583a2.8 2.8 0 0 0-.178-.932c-.098-.253-.23-.467-.443-.68S6.608.3 6.355.201a2.8 2.8 0 0 0-.932-.178C5.013.004 4.883 0 3.84 0m0 1.868a1.972 1.972 0 1 0 0 3.945 1.972 1.972 0 0 0 0-3.945m0 3.252a1.28 1.28 0 1 1 0-2.56 1.28 1.28 0 0 1 0 2.56m2.51-3.33a.461.461 0 1 1-.922 0 .461.461 0 0 1 .922 0"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="flex gap-4">
-                <a
-                  class="text-gray-500 hover:text-primary-blue"
-                  href="https://www.facebook.com/profile.php?id=61581196018123"
-                  aria-label="Facebook de S.D. Sergio Duque Fernández"
-                  target="_blank"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 0.72 0.72" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M.6.03a.09.09 0 0 1 .09.09V.6A.09.09 0 0 1 .6.69H.12A.09.09 0 0 1 .03.6V.12A.09.09 0 0 1 .12.03zm0 .06a.03.03 0 0 1 .03.03V.6A.03.03 0 0 1 .6.63H.45V.42h.062A.03.03 0 0 0 .54.399l.013-.04a.022.022 0 0 0-.021-.03H.45V.27C.45.255.465.24.48.24h.06A.03.03 0 0 0 .57.21V.189A.02.02 0 0 0 .554.168C.515.158.48.158.48.158.405.158.36.21.36.255V.33H.3a.03.03 0 0 0-.03.03v.03A.03.03 0 0 0 .3.42h.06v.21H.12A.03.03 0 0 1 .09.6V.12A.03.03 0 0 1 .12.09z" fill="currentColor"/></svg>
-                </a>
-              </div>
+                  <path
+                    d="M3.84.692c1.026 0 1.147.004 1.552.022.374.017.578.08.713.132.179.07.307.153.442.287s.217.263.287.442c.052.136.115.339.132.713.018.405.022.526.022 1.552s-.004 1.147-.022 1.552c-.017.374-.08.578-.132.713-.07.179-.153.307-.287.442s-.263.217-.442.287a2.2 2.2 0 0 1-.713.132c-.405.018-.526.022-1.552.022s-1.147-.004-1.552-.022c-.374-.017-.578-.08-.713-.132a1.2 1.2 0 0 1-.442-.287 1.2 1.2 0 0 1-.287-.442 2.2 2.2 0 0 1-.132-.713C.696 4.987.692 4.866.692 3.84s.004-1.147.022-1.552c.017-.374.08-.578.132-.713a1.2 1.2 0 0 1 .287-.442c.135-.135.263-.217.442-.287.136-.052.339-.115.713-.132.405-.018.526-.022 1.552-.022m0-.692C2.797 0 2.667.004 2.257.023s-.688.083-.932.179C1.072.3.858.432.645.645s-.345.427-.444.68c-.095.244-.16.523-.178.932S0 2.797 0 3.84s.004 1.173.023 1.583c.018.409.084.688.178.932.098.253.23.467.443.68s.427.345.68.443c.244.095.523.16.932.178s.54.023 1.583.023 1.173-.004 1.583-.023c.408-.018.688-.084.932-.178.253-.098.467-.23.68-.443s.345-.427.443-.68c.095-.244.16-.523.178-.932s.023-.54.023-1.583-.004-1.173-.023-1.583a2.8 2.8 0 0 0-.178-.932c-.098-.253-.23-.467-.443-.68S6.608.3 6.355.201a2.8 2.8 0 0 0-.932-.178C5.013.004 4.883 0 3.84 0m0 1.868a1.972 1.972 0 1 0 0 3.945 1.972 1.972 0 0 0 0-3.945m0 3.252a1.28 1.28 0 1 1 0-2.56 1.28 1.28 0 0 1 0 2.56m2.51-3.33a.461.461 0 1 1-.922 0 .461.461 0 0 1 .922 0"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="inline text-base">Instagram</span>
+              </a>
+              <a
+                class="flex items-center gap-2 text-gray-500 hover:text-primary-blue transition-colors"
+                href="https://www.facebook.com/profile.php?id=61581196018123"
+                aria-label="Facebook de S.D. Sergio Duque Fernández"
+                target="_blank"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 0.72 0.72" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M.6.03a.09.09 0 0 1 .09.09V.6A.09.09 0 0 1 .6.69H.12A.09.09 0 0 1 .03.6V.12A.09.09 0 0 1 .12.03zm0 .06a.03.03 0 0 1 .03.03V.6A.03.03 0 0 1 .6.63H.45V.42h.062A.03.03 0 0 0 .54.399l.013-.04a.022.022 0 0 0-.021-.03H.45V.27C.45.255.465.24.48.24h.06A.03.03 0 0 0 .57.21V.189A.02.02 0 0 0 .554.168C.515.158.48.158.48.158.405.158.36.21.36.255V.33H.3a.03.03 0 0 0-.03.03v.03A.03.03 0 0 0 .3.42h.06v.21H.12A.03.03 0 0 1 .09.6V.12A.03.03 0 0 1 .12.09z" fill="currentColor"/></svg>
+                <span class="inline text-base">Facebook</span>
+              </a>
             </div>
           </div>
         </footer>
