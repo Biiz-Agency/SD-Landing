@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.1, // Trigger when 10% of the contact section is visible
+        threshold: 0, // Trigger immediately when contact section appears
       }
     );
 
