@@ -140,6 +140,39 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contactForm) {
     contactForm.addEventListener("submit", handleContactFormSubmit);
   }
+
+  // Floating WhatsApp Button Logic
+  const whatsappButton = document.getElementById("whatsapp-float");
+  const contactSection = document.getElementById("contact");
+
+  if (whatsappButton && contactSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Hide button when contact section is visible
+            whatsappButton.classList.add("opacity-0", "pointer-events-none");
+            whatsappButton.classList.remove(
+              "opacity-100",
+              "pointer-events-auto"
+            );
+          } else {
+            // Show button when contact section is not visible
+            whatsappButton.classList.remove("opacity-0", "pointer-events-none");
+            whatsappButton.classList.add("opacity-100", "pointer-events-auto");
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the contact section is visible
+      }
+    );
+
+    observer.observe(contactSection);
+  }
+
+  // Initialize details animations
+  initDetailsAnimations();
 });
 
 /**
@@ -229,6 +262,91 @@ function getServicesData() {
  */
 function getServiceNames() {
   return SERVICES_DATA.categories.map((category) => category.name);
+}
+
+/**
+ * Initialize smooth animations for details elements
+ */
+function initDetailsAnimations() {
+  const detailsElements = document.querySelectorAll("details");
+
+  detailsElements.forEach((details) => {
+    const summary = details.querySelector("summary");
+    const arrow = summary.querySelector(".transition-transform");
+
+    summary.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Prevent double clicks messing up animation
+      if (details.dataset.isAnimating) return;
+      details.dataset.isAnimating = "true";
+
+      if (details.open) {
+        // Closing animation
+        const startHeight = details.offsetHeight;
+        details.style.height = `${startHeight}px`;
+
+        const computedStyle = window.getComputedStyle(details);
+        const paddingTop = parseFloat(computedStyle.paddingTop);
+        const paddingBottom = parseFloat(computedStyle.paddingBottom);
+        const borderTop = parseFloat(computedStyle.borderTopWidth);
+        const borderBottom = parseFloat(computedStyle.borderBottomWidth);
+
+        const closedHeight =
+          summary.offsetHeight +
+          paddingTop +
+          paddingBottom +
+          borderTop +
+          borderBottom;
+
+        requestAnimationFrame(() => {
+          details.style.height = `${closedHeight}px`;
+          if (arrow) arrow.style.transform = "rotate(0deg)";
+        });
+
+        const onTransitionEnd = () => {
+          details.removeEventListener("transitionend", onTransitionEnd);
+          details.removeAttribute("open");
+          details.style.height = null;
+          if (arrow) arrow.style.transform = "";
+          delete details.dataset.isAnimating;
+        };
+        details.addEventListener("transitionend", onTransitionEnd);
+      } else {
+        // Opening animation
+        const computedStyle = window.getComputedStyle(details);
+        const paddingTop = parseFloat(computedStyle.paddingTop);
+        const paddingBottom = parseFloat(computedStyle.paddingBottom);
+        const borderTop = parseFloat(computedStyle.borderTopWidth);
+        const borderBottom = parseFloat(computedStyle.borderBottomWidth);
+
+        const closedHeight =
+          summary.offsetHeight +
+          paddingTop +
+          paddingBottom +
+          borderTop +
+          borderBottom;
+
+        details.style.height = `${closedHeight}px`;
+        details.setAttribute("open", "");
+
+        const targetHeight = details.scrollHeight;
+
+        requestAnimationFrame(() => {
+          details.style.height = `${targetHeight}px`;
+          if (arrow) arrow.style.transform = "rotate(180deg)";
+        });
+
+        const onTransitionEnd = () => {
+          details.removeEventListener("transitionend", onTransitionEnd);
+          details.style.height = null;
+          if (arrow) arrow.style.transform = "";
+          delete details.dataset.isAnimating;
+        };
+        details.addEventListener("transitionend", onTransitionEnd);
+      }
+    });
+  });
 }
 
 // Export for potential use in other modules
