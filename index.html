@@ -107,6 +107,14 @@
         transition: height 0.4s ease-in-out;
         overflow: hidden;
       }
+
+      @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 30s linear infinite;
+      }
     </style>
   </head>
   <body
@@ -216,7 +224,7 @@
           <section class="w-full">
             <div class="relative h-[600px] max-h-[80vh] overflow-hidden">
               <img
-                src="banner.jpg"
+                src="/assets/banner.jpg"
                 alt="Una planta de procesamiento de alimentos limpia con productos frescos en primer plano"
                 class="absolute inset-0 w-full h-full object-cover"
               />
@@ -255,7 +263,7 @@
                   <img
                     class="w-full aspect-square object-cover object-center-top rounded-xl"
                     style="object-position: center top;"
-                    src="headshot.png"
+                    src="/assets/headshot.png"
                     alt="Retrato profesional del experto en seguridad alimentaria con bata de laboratorio"
                   />
                 </div>
@@ -340,6 +348,58 @@
               </div>
             </section>
            
+            <section class="w-full py-10 md:py-20 overflow-hidden" id="allies">
+              <div class="flex flex-col gap-4 mb-10 px-4">
+                <h2 class="text-primary text-4xl md:text-5xl font-bold font-oswald">
+                  Nuestros Aliados
+                </h2>
+              </div>
+              
+              <div class="relative w-full pause-on-hover">
+                <div class="flex w-max animate-marquee gap-12 items-center hover:pause">
+                  <!-- Original Set -->
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/condivalle.webp" alt="Condivalle" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/la-fortuna.webp" alt="La Fortuna" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/naturandes.webp" alt="Naturandes" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/prodecol.webp" alt="Prodecol" class="w-full h-full object-contain">
+                  </div>
+                   <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/soluciones-carnicas.webp" alt="Soluciones Carnicas" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/terrazas-agropecuarias.webp" alt="Terrazas Agropecuarias" class="w-full h-full object-contain">
+                  </div>
+
+                  <!-- Duplicate Set for infinite loop -->
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/condivalle.webp" alt="Condivalle" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/la-fortuna.webp" alt="La Fortuna" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/naturandes.webp" alt="Naturandes" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/prodecol.webp" alt="Prodecol" class="w-full h-full object-contain">
+                  </div>
+                   <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/soluciones-carnicas.webp" alt="Soluciones Carnicas" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white rounded-full overflow-hidden shadow-md flex items-center justify-center p-4 border border-gray-100 hover:scale-110 transition-transform duration-300">
+                    <img src="assets/companies/terrazas-agropecuarias.webp" alt="Terrazas Agropecuarias" class="w-full h-full object-contain">
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             <section class="w-full py-10 md:py-20" id="testimonials">
               <div
                 class="bg-secondary-green/40 dark:bg-secondary-green/20 rounded-xl p-8 md:p-12 text-center"
